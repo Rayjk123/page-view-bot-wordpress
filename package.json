@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && serverless invoke local --function helloWorld",
+    "start": "tsc && serverless invoke local --function pageViewBot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

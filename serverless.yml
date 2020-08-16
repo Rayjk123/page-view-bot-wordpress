@@ -5,6 +5,9 @@ provider:
   runtime: nodejs12.x
 
 functions:
-  helloWorld:
+  pageViewBot:
     handler: index.handler
-    name: serverless-hello-world
+    name: page-view-bot
+    description: Runs through faith4.net posts once
+    memorySize: 1600
+    timeout: 600
