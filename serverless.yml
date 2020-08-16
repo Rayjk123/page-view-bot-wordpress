@@ -11,3 +11,69 @@ functions:
     description: Runs through faith4.net posts once
     memorySize: 1600
     timeout: 600
+    events:
+      - schedule:
+          cron: cron(0 8 * * ? *)
+          input:
+            page: 1
+      - schedule:
+          cron: cron(0 9 * * ? *)
+          input:
+            page: 2
+      - schedule:
+          cron: cron(0 10 * * ? *)
+          input:
+            page: 3
+      - schedule:
+          cron: cron(0 11 * * ? *)
+          input:
+            page: 4
+      - schedule:
+          cron: cron(0 12 * * ? *)
+          input:
+            page: 5
+      - schedule:
+          cron: cron(0 13 * * ? *)
+          input:
+            page: 6
+      - schedule:
+          cron: cron(0 14 * * ? *)
+          input:
+            page: 7
+      - schedule:
+          cron: cron(0 15 * * ? *)
+          input:
+            page: 8
+      - schedule:
+          cron: cron(0 16 * * ? *)
+          input:
+            page: 9
+      - schedule:
+          cron: cron(0 17 * * ? *)
+          input:
+            page: 10
+      - schedule:
+          cron: cron(0 18 * * ? *)
+          input:
+            page: 11
+      - schedule:
+          cron: cron(0 19 * * ? *)
+          input:
+            page: 12
+      - schedule:
+          cron: cron(0 20 * * ? *)
+          input:
+            page: 13
+      - schedule:
+          cron: cron(0 21 * * ? *)
+          input:
+            page: 14
+      - schedule:
+          cron: cron(0 22 * * ? *)
+          input:
+            page: 15
+      - schedule:
+          cron: cron(0 23 * * ? *)
+          input:
+            page: 16
+
