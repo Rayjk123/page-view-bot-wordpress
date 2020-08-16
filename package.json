@@ -1,0 +1,22 @@
+{
+  "name": "aws-serverless-lambda-typescript-lambda-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && serverless invoke local --function helloWorld",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.0.22",
+    "@types/puppeteer": "^3.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chrome-aws-lambda": "^5.2.1",
+    "puppeteer-core": "^5.2.1",
+    "url": "^0.11.0"
+  }
+}

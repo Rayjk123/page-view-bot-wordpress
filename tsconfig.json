@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "**/*.ts",
+    "node_modules/@types/puppeteer/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
