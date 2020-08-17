@@ -1,4 +1,5 @@
 import { getAllWordpressPostsOnPage } from "./service/wordpressService";
+import { visitBrowser } from "./service/browserService";
 
 const chromium = require('chrome-aws-lambda');
 
@@ -9,21 +10,10 @@ export const handler = async (event: any) => {
 
     for (const postUrl of wordpressPostUrls) {
         console.log(`Navigating to the following URL: ${postUrl}`);
-        const browser = await chromium.puppeteer.launch({
-            args: chromium.args,
-            defaultViewport: chromium.defaultViewport,
-            executablePath: await chromium.executablePath,
-            headless: chromium.headless,
-            ignoreHTTPSErrors: true,
-        });
-        const page = await browser.newPage();
-        await page.setJavaScriptEnabled(true);
-        await page.goto(
-            postUrl,
-            { waitUntil: 'networkidle0' }
-        );
 
-        await browser.close();
+        for (let i = 0; i < 2; i++) {
+            await visitBrowser(postUrl);
+        }
 
         console.log(`Completed ${count} out of ${wordpressPostUrls.length}`);
         count++;
