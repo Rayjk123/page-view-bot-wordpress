@@ -7,6 +7,7 @@ export const visitBrowser = async (url: string) => {
         executablePath: await chromium.executablePath,
         headless: chromium.headless,
         ignoreHTTPSErrors: true,
+        isMobile: true
     });
     const page = await browser.newPage();
     await page.setJavaScriptEnabled(true);
